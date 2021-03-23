@@ -27,7 +27,23 @@ $(document).ready(function() {
     /*===================================================================
     *
     =====================================================================*/
+    $('.header__logo, .header__link, #hero__button').on('click', function (event) {
+        if (this.hash !== '') {
+            event.preventDefault();
 
+            // Store hash
+            let hash = this.hash;
+
+            $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                },
+                1500,
+                function () {
+                    window.location.hash = hash;
+                }
+            );
+        }
+    });
 
 
 
