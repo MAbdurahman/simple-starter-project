@@ -32,7 +32,11 @@ html {
 body {
    overflow-x: hidden;
 }
-
+.container {
+   max-width: 1180px;
+   margin: 0 auto;
+   padding: 0 10px;
+}
 ul,
 nav {
    list-style: none;
@@ -54,7 +58,8 @@ a.btn {
    text-transform: uppercase;
    text-align: center;
    font-weight: bold;
-   background-color: #3f51b5;
+   /*background-color: #3f51b5;*/
+   background-color: #224186;
    border-radius: 4px;
    -webkit-border-radius: 4px;
    -moz-border-radius: 4px;
@@ -107,6 +112,176 @@ section p {
 /*==========================================
             Header
 =============================================*/
+.header {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   z-index: 50;
+}
+.header::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(60, 63, 92);
+   z-index: 2;
+
+}
+.header__body {
+   position: relative;
+   /* z-index: 2; */
+   display: flex;
+   justify-content: space-between;
+   height: 80px;
+   align-items: center;
+}
+.header__logo{
+   flex: 0 0 60px;
+   border-radius: 50%;
+   overflow: hidden;
+   position: relative;
+   z-index: 3;
+
+}
+
+.header__logo  img{
+   max-width: 100%;
+   display: block;
+}
+.header__burger{
+   display: none;
+}
+.header__menu{ }
+
+.header__list {
+   display: flex;
+   position: relative;
+   z-index: 2;
+}
+.header__list li{
+   list-style: none;
+   margin-left: 20px;
+}
+.header__link{
+   color: #ffffff;
+   text-transform: uppercase;
+   font-size: 18px;
+   text-decoration: none;
+}
+
+@media(max-width: 768px){
+   body.lock {
+      overflow: hidden;
+   }
+
+   .header__logo{
+      flex: 0 0 40px;
+   }
+   .header__body {
+      height: 50px;
+   }
+   .header__burger {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      position: relative;
+      z-index: 3;
+   }
+   .header__burger span {
+      position: absolute;
+      background-color: #ffffff;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      top: 9px;
+      transition: all 0.3s ease 0s;
+   }
+   .header__burger::before,
+   .header__burger::after{
+      content: '';
+      background-color: #ffffff;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      top: px;
+      transition: all 0.3s ease 0s;
+   }
+   .header__burger::after{
+      bottom: 0;
+   }
+
+   .header__burger.active::before {
+      transform: rotate(45deg);
+      top: 9px;
+   }
+   .header__burger.active::after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+   }
+   .header__burger.active span {
+      transform: scale(0);
+   }
+   .header__menu {
+      position: fixed;
+      top: -120%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      transition: all 0.3s ease 0s;
+      /*background-color: rgba(0, 0, 0, 0.95);*/
+      background-color: rgba(60, 63, 93, 0.95);
+      padding: 70px 10px 20px 10px;
+
+   }
+
+   .header__menu.active {
+      top: 5%;
+   }
+
+   .header__list{
+      display: block;
+   }
+
+   .header__list li{
+      margin:0px 0px 20px 0px;
+   }
+
+   .header__link {
+      font-size: 24px;
+   }
+}
+
+.content{
+   padding: 100px 0px 0px 0px ;
+}
+.content__text {
+   font-size: 16px;
+   line-height: 25px;
+}
+.content__text p{
+   margin: 0px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+   .content {
+      padding: 70px 0px 0px 0px ;
+   }
+}
+
+
+
+
+
+
+
+
+
+/*===============================================================*/
 header {
    position: absolute;
    z-index: 10;
@@ -171,7 +346,7 @@ header nav li a {
 }
 
 .hero h3 {
-   font: normal 28px "Open Sans", sans-serif;
+   font: normal 32px "Open Sans", sans-serif;
    margin-bottom: 40px;
 }
 
@@ -215,7 +390,9 @@ header nav li a {
 }
 
 .packages svg.svg-inline--fa {
-   color: #8c9eff;
+   /*color: #8c9eff;*/
+   /*color: #8faad5;*/
+   color: #4976b7;
 }
 
 .packages .grid li h4 {
@@ -265,7 +442,8 @@ footer {
    display: flex;
    align-items: center;
    justify-content: space-around;
-   background-color: #607d8b;
+   /*background-color: #607d8b;*/
+   background-color: #3c3f5d;
    color: #fff;
    padding: 20px 0;
 }
@@ -357,7 +535,8 @@ footer p {
    }
 
    .hero h3 {
-      font-size: 24px;
+      /*font-size: 24px;*/
+      font-size: 32px;
    }
 
    .hero a.btn {
