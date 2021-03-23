@@ -53,12 +53,13 @@ a:hover {
    cursor: pointer;
    opacity: 1;
 }
-
+.hero a.btn,
 a.btn {
+   position: relative;
    text-transform: uppercase;
    text-align: center;
    font-weight: bold;
-   /*background-color: #3f51b5;*/
+   letter-spacing: 1px;
    background-color: #224186;
    border-radius: 4px;
    -webkit-border-radius: 4px;
@@ -66,6 +67,21 @@ a.btn {
    -ms-border-radius: 4px;
    -o-border-radius: 4px;
    opacity: 1;
+   border: 2px solid #224186;
+   -webkit-transition: border 0.4s,
+               color 0.4s,
+               background-color 0.4s ;
+   transition: border 0.4s,
+   color 0.4s,
+   background-color 0.4s;
+   -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.hero a.btn:hover,
+a.btn:hover {
+   color: #224186;
+   border: 2px solid #224186;
+   background-color: #f5f5f5;
 }
 
 section {
@@ -132,7 +148,6 @@ section p {
 }
 .header__body {
    position: relative;
-   /* z-index: 2; */
    display: flex;
    justify-content: space-between;
    height: 80px;
@@ -170,8 +185,15 @@ section p {
    color: #ffffff;
    text-transform: uppercase;
    font-size: 1.125rem;
+   letter-spacing: 1px;
    text-decoration: none;
-   transition: border-bottom .5s
+   padding-bottom: .5em;
+   transition: border-bottom .5s cubic-bezier(0.26, 0.1, 0.27, 1.55);
+
+}
+.header__link:hover,
+.header__link.active {
+   border-bottom: 2px solid white;
 }
 
 @media(max-width: 768px){
@@ -277,14 +299,6 @@ section p {
    }
 }
 
-
-
-
-
-
-
-
-
 /*===============================================================*/
 header {
    position: absolute;
@@ -327,6 +341,7 @@ header nav li a {
 =============================================*/
 .hero {
    position: relative;
+   z-index: 12;
    justify-content: center;
    text-align: center;
    min-height: 100vh;
@@ -355,11 +370,13 @@ header nav li a {
 }
 
 .hero a.btn {
+   z-index: 12;
    padding: 20px 46px;
    color: #fff;
 }
 
 .hero-content-area {
+   z-index: 12;
    opacity: 0;
    margin-top: 100px;
    animation: 1s slidefade 1s forwards;
