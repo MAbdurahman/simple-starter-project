@@ -13,12 +13,12 @@
       <link rel="stylesheet" href="css/styles.css">
    </head>
 
-   <body>
+   <body id="page-top" class="scrollspy">
       <!-- begin of header -->
      <header class="header">
         <div class="container">
            <div class="header__body">
-              <a href="#" class="header__logo">
+              <a href="#page-top" class="header__logo">
                  <img src="./img/logo.png" alt="logo">
               </a>
               <div class="header__burger">
@@ -26,11 +26,11 @@
               </div>
               <nav class="header__menu">
                  <ul class="header__list">
-                    <li><a href="#" class="header__link">Home</a></li>
-                    <li><a href="#" class="header__link">Tours</a></li>
-                    <li><a href="#" class="header__link">Packages</a></li>
-                    <li><a href="#" class="header__link">Testimonials</a></li>
-                    <li><a href="#" class="header__link">Contact</a></li>
+                    <li><a href="#page-top" class="header__link">Home</a></li>
+                    <li><a href="#tours" class="header__link">Tours</a></li>
+                    <li><a href="#packages" class="header__link">Packages</a></li>
+                    <li><a href="#testimonials" class="header__link">Testimonials</a></li>
+                    <li><a href="#contact" class="header__link">Contact</a></li>
                  </ul>
               </nav>
            </div>
@@ -43,12 +43,12 @@
          <div class="hero-content-area">
             <h1>Mountain Travel</h1>
             <h3>Adventure Tours Around The World</h3>
-            <a href="#" class="btn">View More</a>
+            <a href="#tours" class="btn">View More</a>
          </div>
       </section>
       <!-- end of hero -->
       <!-- begin of destination section -->
-      <section class="destinations">
+      <section id="tours" class="destinations scrollspy">
          <h3 class="title">Our tour adventures</h3>
          <p>Tired of the ocean? Are the plains too plain? Come along with us on one of our mountain adventures. Here are
             some pictures from people who have had elevated experiences with us.</p>
@@ -62,7 +62,7 @@
       </section>
       <!-- end of destination section -->
       <!-- begin of package section -->
-      <section class="packages">
+      <section id="packages" class="packages scrollspy">
          <h3 class="title">Tour Packages</h3>
          <p>We offer a variety of mountaineering packages. Whether you've climbed Everest or don't even know what a
             mountain is, we've got the perfect vacation for you.</p>
@@ -97,7 +97,7 @@
       </section>
       <!-- end of package section -->
       <!-- begin of testimonial section -->
-      <section class="testimonials">
+      <section id="testimonials" class="testimonials scrollspy">
          <h3 class="title">Testimonials from our adventurers</h3>
          <hr>
          <p class="quote">Wow! This tour made me realize how much I love mountains. After going on one of these tours, I
@@ -112,7 +112,7 @@
       </section>
       <!-- end of testimonial section -->
       <!-- begin of contact section -->
-      <section class="contact">
+      <section id="contact" class="contact scrollspy">
          <h3 class="title">Learn more Contact Us</h3>
          <p>Want to know about our upcoming mountain-related events, or come to one of our mixers? Just sign up for our
             mailing list. No spam from us, we promise! Except for the spam we give you to keep up your energy while
@@ -141,6 +141,8 @@
       <script src="js/jquery-3.4.1.min.js"></script>
       <!-- font awesome -->
       <script src="js/all.min.js"></script>
+      <!--simple scroll-spy js https://github.com/kimyvgy/simple-scrollspy -->
+      <script src="js/simple-scroll-spy/simple-scrollspy.min.js"></script>
       <!-- main scripts -->
       <script src="js/scripts.js"></script>
    </body>
