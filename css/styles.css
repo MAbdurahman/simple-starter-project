@@ -125,6 +125,27 @@ section p {
    text-align: center;
 }
 
+/* =========================================
+              Preloader
+============================================ */
+#preloader {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+   /*background: #3c3f5d;*/
+   background-color: whitesmoke;
+   display: -webkit-box;
+   display: flex;
+   -webkit-box-align: center;
+   align-items: center;
+   -webkit-box-pack: center;
+   justify-content: center;
+   z-index: 10000;
+}
+
 /*==========================================
             Header
 =============================================*/
@@ -281,6 +302,9 @@ section p {
    .header__link {
       font-size: 1.50rem;
    }
+   .header__link:active {
+      border-bottom: 2px solid white;
+   }
 }
 
 .content{
@@ -379,7 +403,7 @@ header nav li a {
    z-index: 12;
    opacity: 0;
    margin-top: 100px;
-   animation: 1s slidefade 1s forwards;
+   animation: 1s slidefade 3.5s forwards;
 }
 
 /*==========================================
