@@ -66,14 +66,10 @@ $(document).ready(function() {
 
     for (let i = 0; i < links.length; i++) {
         links[i].addEventListener('click', function () {
-            console.log(`link - ${i}`)
             let current = list.getElementsByClassName('active');
-            console.log(links[i+1]);
-            current[0].className = links[i-1].className.replace('.active', '');
+            current[0].className = current[0].className.replace('.active', '');
             this.className += ' active';
-            console.log(`this -> ${this.classList}`);
         })
-        // console.log(list);
     }
     /*===================================================================
     * add active class to the current hero__button, highlight it, and
