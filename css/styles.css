@@ -562,11 +562,16 @@ footer p {
    }
 
    section {
-      padding: 50px 20px;
+      /*padding: 50px 20px;*/
+      padding-left: 1.25em;
+      padding-right: 1.25em;
+      padding-top: 2em;
+      padding-bottom: 1.5em;
    }
 
-   .hero {
+   section.hero {
       min-height: 600px;
+      margin-top: 2.75em;
    }
 
    .hero h1 {
@@ -580,13 +585,22 @@ footer p {
    .hero a.btn {
       padding: 15px 40px;
    }
+   #tours {
+      padding-top: 7em;
+   }
    .destinations .grid li.small,
    .destinations .grid li.large {
       flex-basis: 100%;
    }
+   #packages {
+      padding-top: 7em;
+   }
    .packages .grid li {
       flex-basis: 100%;
       padding: 20px;
+   }
+   #testimonials {
+      padding-top: 6.5em;
    }
    .testimonials .quote {
       font-size: 1.125rem;
@@ -595,5 +609,13 @@ footer p {
 
    .testimonials .author {
       font-size: .875rem;
+   }
+   #contact {
+      padding-top: 5.5em;
+   }
+}
+@media (max-width: 375px) {
+   #contact {
+      padding-top: 5.5em;
    }
 }
